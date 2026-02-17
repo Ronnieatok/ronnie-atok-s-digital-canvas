@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,7 +16,7 @@
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 92%;
 
-    --primary: 45 100% 50%;
+    --primary: 43 98% 80%;
     --primary-foreground: 0 0% 7%;
 
     --secondary: 0 0% 18%;
@@ -49,6 +50,7 @@
     --gradient-gold: linear-gradient(135deg, hsl(45, 100%, 50%), hsl(35, 100%, 45%));
     --shadow-card: 0 20px 60px -15px hsla(0, 0%, 0%, 0.5);
     --shadow-glow: 0 0 20px hsla(45, 100%, 50%, 0.15);
+    --font-sans: Poppins, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 
   * {
@@ -58,6 +60,9 @@
   body {
     @apply bg-background text-foreground font-sans;
     font-family: 'Poppins', sans-serif;
+  }
+  .dark {
+    --font-sans: Poppins, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 }
 
