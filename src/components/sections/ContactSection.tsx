@@ -1,18 +1,38 @@
 import { useState, FormEvent } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactSection = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out, Ronnie will get back to you soon.",
-    });
-    setForm({ name: "", email: "", message: "" });
+    setSending(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke("send-email", {
+        body: { name: form.name, email: form.email, message: form.message },
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message sent!",
+        description: "Thanks for reaching out, Ronnie will get back to you soon.",
+      });
+      setForm({ name: "", email: "", message: "" });
+    } catch (err: any) {
+      toast({
+        title: "Failed to send",
+        description: err?.message || "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -84,10 +104,11 @@ const ContactSection = () => {
           />
           <button
             type="submit"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity"
+            disabled={sending}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity disabled:opacity-50"
           >
-            <Send size={14} />
-            Send Message
+            {sending ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
+            {sending ? "Sending..." : "Send Message"}
           </button>
         </form>
       </div>
