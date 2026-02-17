@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Menu } from "lucide-react";
 import Sidebar from "@/components/Sidebar";
 import HomeSection from "@/components/sections/HomeSection";
@@ -19,9 +19,24 @@ const sections: Record<string, React.FC<any>> = {
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
+  const [displayedSection, setDisplayedSection] = useState("home");
+  const [transitioning, setTransitioning] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const ActiveComponent = sections[activeSection];
+  const handleNavigate = useCallback(
+    (section: string) => {
+      if (section === activeSection) return;
+      setTransitioning(true);
+      setTimeout(() => {
+        setActiveSection(section);
+        setDisplayedSection(section);
+        setTransitioning(false);
+      }, 250);
+    },
+    [activeSection]
+  );
+
+  const ActiveComponent = sections[displayedSection];
 
   return (
     <div className="min-h-screen bg-background flex items-start justify-center p-4 md:p-8">
@@ -37,17 +52,25 @@ const Index = () => {
         {/* Sidebar */}
         <Sidebar
           activeSection={activeSection}
-          onNavigate={setActiveSection}
+          onNavigate={handleNavigate}
           isOpen={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
         />
 
         {/* Main Content */}
-        <main className="flex-1 card-surface p-6 md:p-10 min-h-[90vh]">
-          <ActiveComponent
-            key={activeSection}
-            onNavigate={setActiveSection}
-          />
+        <main className="flex-1 card-surface p-6 md:p-10 min-h-[90vh] overflow-hidden">
+          <div
+            className={`transition-all duration-300 ease-in-out ${
+              transitioning
+                ? "opacity-0 translate-y-4"
+                : "opacity-100 translate-y-0"
+            }`}
+          >
+            <ActiveComponent
+              key={displayedSection}
+              onNavigate={handleNavigate}
+            />
+          </div>
         </main>
       </div>
     </div>
