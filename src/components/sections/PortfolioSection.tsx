@@ -1,0 +1,115 @@
+import { useState } from "react";
+import { ExternalLink, Camera, Code } from "lucide-react";
+
+const categories = ["All", "Photography", "Web Development"];
+
+const projects = [
+  {
+    title: "Golden Hour Portraits",
+    category: "Photography",
+    desc: "A portrait series capturing the warm glow of Nairobi's golden hour.",
+    link: "#",
+  },
+  {
+    title: "E-Commerce Platform",
+    category: "Web Development",
+    desc: "A full-stack online store built with React and modern backend APIs.",
+    link: "#",
+  },
+  {
+    title: "Street Life Nairobi",
+    category: "Photography",
+    desc: "Documentary photography showcasing Nairobi's vibrant street culture.",
+    link: "#",
+  },
+  {
+    title: "Restaurant Website",
+    category: "Web Development",
+    desc: "Responsive website for a local restaurant with online menu and reservations.",
+    link: "#",
+  },
+  {
+    title: "Wildlife Safari",
+    category: "Photography",
+    desc: "A collection of wildlife shots from Maasai Mara and Amboseli National Parks.",
+    link: "#",
+  },
+  {
+    title: "Portfolio Dashboard",
+    category: "Web Development",
+    desc: "Interactive analytics dashboard for tracking creative project metrics.",
+    link: "#",
+  },
+  {
+    title: "Wedding Stories",
+    category: "Photography",
+    desc: "Elegant wedding photography capturing love stories across Kenya.",
+    link: "#",
+  },
+  {
+    title: "NGO Landing Page",
+    category: "Web Development",
+    desc: "Clean, accessible landing page for a Nairobi-based environmental NGO.",
+    link: "#",
+  },
+];
+
+const PortfolioSection = () => {
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filtered =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeFilter);
+
+  return (
+    <section className="animate-fade-up">
+      <h2 className="section-title">Portfolio</h2>
+
+      {/* Filters */}
+      <div className="flex flex-wrap gap-2 mb-8">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setActiveFilter(cat)}
+            className={`px-4 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+              activeFilter === cat
+                ? "bg-primary text-primary-foreground"
+                : "bg-secondary text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {filtered.map((project, i) => (
+          <div key={project.title} className="project-card p-5">
+            <div className="flex items-start justify-between mb-3">
+              <span className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center text-primary">
+                {project.category === "Photography" ? (
+                  <Camera size={14} />
+                ) : (
+                  <Code size={14} />
+                )}
+              </span>
+              <a
+                href={project.link}
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                <ExternalLink size={14} />
+              </a>
+            </div>
+            <h3 className="text-sm font-semibold text-foreground mb-1">{project.title}</h3>
+            <p className="text-xs text-primary mb-2">{project.category}</p>
+            <p className="text-xs text-muted-foreground leading-relaxed">{project.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default PortfolioSection;
