@@ -1,4 +1,4 @@
-import { Resend } from "npm:resend@6";
+import { Resend } from "https://esm.sh/resend@4.1.2";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
