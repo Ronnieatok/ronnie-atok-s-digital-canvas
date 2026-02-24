@@ -1,8 +1,12 @@
 import { MapPin, Mail, Phone, Calendar } from "lucide-react";
 
 const skills = [
-  { name: "Photography", level: 92 },
+  { name: "Photography", level: 98 },
+  { name: "AI Prompting", level: 80 },
   { name: "Photo Editing", level: 88 },
+  { name: "Photoshop", level: 75 },
+  { name: "Canva", level: 80 },
+  { name: "Video Editing", level: 65 },
   { name: "HTML", level: 90 },
   { name: "CSS", level: 85 },
   { name: "JavaScript", level: 78 },
@@ -15,11 +19,7 @@ const AboutSection = () => {
       <h2 className="section-title">About Me</h2>
 
       <p className="text-muted-foreground leading-relaxed mb-8 text-sm">
-        I'm Ronnie Atok, a passionate photographer and web developer from Nairobi, Kenya.
-        With a keen eye for detail and a love for clean design, I bring visual stories to
-        life — whether through the camera lens or lines of code. I believe great design
-        is about solving problems beautifully, and I strive to create work that is both
-        functional and inspiring.
+        I'm Ronnie Atok, a front-end developer, photographer, and problem solver from Nairobi, Kenya. I combine technical expertise with creative vision to craft clean, responsive interfaces and visual stories that are both functional and meaningful. My work focuses on building digital products that improve access to services, streamline everyday processes, and create real impact for communities. When I'm not coding, I'm behind the camera, capturing moments and exploring new ways to blend technology with everyday life.
       </p>
 
       {/* Personal Info */}
