@@ -2,42 +2,41 @@ import { GraduationCap, Briefcase } from "lucide-react";
 
 const education = [
   {
-    year: "2020 — 2023",
-    title: "Bachelor of Science in Computer Science",
-    place: "University of Nairobi",
+    year: "2022 — 2026",
+    title: "Freelance Photographer & Web Developer",
+    place: "Nairobi, Kenya",
     desc: "Focused on web technologies, software engineering, and UI/UX design principles.",
   },
   {
-    year: "2018 — 2020",
-    title: "Diploma in Photography",
-    place: "Kenya Institute of Media & Technology",
-    desc: "Studied composition, lighting, post-processing, and visual storytelling techniques.",
+    year: "2018 — 2022",
+    title: "Diploma in Purchasing and supplies Chain Management",
+    place: "The Cooperative University of Kenya",
+    desc: "Studied principles of procurement and supply: Purchasing processes, supplier selection, tendering, contract management, and ethics in procurement.",
   },
   {
-    year: "2014 — 2017",
+    year: "2013 — 2016",
     title: "Kenya Certificate of Secondary Education",
-    place: "Nairobi High School",
-    desc: "Graduated with strong grades in sciences and creative arts.",
+    place: "JG Kiereini Boys High School",
   },
 ];
 
 const experience = [
   {
-    year: "2023 — Present",
+    year: "2025 — Present",
     title: "Freelance Photographer & Web Developer",
     place: "Self-Employed",
     desc: "Building responsive websites and capturing events, portraits, and brand visuals for clients across East Africa.",
   },
   {
-    year: "2021 — 2023",
+    year: "2021 — 2025",
     title: "Junior Web Developer",
-    place: "Creative Agency, Nairobi",
+    place: "Finn Church Aid, Nairobi Kenya",
     desc: "Developed modern web applications using React and collaborated with design teams on UI implementation.",
   },
   {
     year: "2019 — 2021",
     title: "Photography Assistant",
-    place: "Studio 254, Nairobi",
+    place: "Clicpics, Nairobi",
     desc: "Assisted in photo shoots, handled post-production editing, and managed client deliverables.",
   },
 ];
@@ -62,7 +61,7 @@ const ResumeSection = () => {
                 <span className="text-xs text-primary font-medium">{item.year}</span>
                 <h4 className="text-sm font-semibold text-foreground mt-1">{item.title}</h4>
                 <p className="text-xs text-muted-foreground mt-0.5">{item.place}</p>
-                <p className="text-xs text-muted-foreground mt-2 leading-relaxed">{item.desc}</p>
+                {item.desc && <p className="text-xs text-muted-foreground mt-2 leading-relaxed">{item.desc}</p>}
               </div>
             ))}
           </div>
