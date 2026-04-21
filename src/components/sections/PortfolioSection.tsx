@@ -38,18 +38,12 @@ const projects = [
     title: "Portfolio Dashboard",
     category: "Web Development",
     desc: "Interactive analytics dashboard for tracking creative project metrics.",
-    link: "#",
+    link: "https://ronnieatokwebportfolio.netlify.app/",
   },
   {
     title: "Wedding Stories",
     category: "Photography",
     desc: "Elegant wedding photography capturing love stories across Kenya.",
-    link: "#",
-  },
-  {
-    title: "NGO Landing Page",
-    category: "Web Development",
-    desc: "Clean, accessible landing page for a Nairobi-based environmental NGO.",
     link: "#",
   },
 ];
