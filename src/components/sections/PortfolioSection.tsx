@@ -5,10 +5,10 @@ const categories = ["All", "Photography", "Web Development"];
 
 const projects = [
   {
-    title: "Golden Hour Portraits",
+    title: "Professional Photography Website",
     category: "Photography",
-    desc: "A portrait series capturing the warm glow of Nairobi's golden hour.",
-    link: "#",
+    desc: "Clix Visual is a professional photography studio based in Kenya, with a mission to capture authentic stories through imagery both locally and worldwide.",
+    link: "https://clixsvisual.netlify.apl",
   },
   {
     title: "E-Commerce Platform",
