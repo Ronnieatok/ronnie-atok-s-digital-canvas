@@ -17,22 +17,10 @@ const projects = [
     link: "https://nsluxeshop.com/",
   },
   {
-    title: "Street Life Nairobi",
-    category: "Photography",
-    desc: "Documentary photography showcasing Nairobi's vibrant street culture.",
-    link: "#",
-  },
-  {
     title: "Restaurant Website",
     category: "Web Development",
     desc: "Responsive website for a local restaurant with online menu and reservations.",
     link: "https://eliyeresort.netlify.app/menu",
-  },
-  {
-    title: "Wildlife Safari",
-    category: "Photography",
-    desc: "A collection of wildlife shots from Maasai Mara and Amboseli National Parks.",
-    link: "#",
   },
   {
     title: "Portfolio Dashboard",
