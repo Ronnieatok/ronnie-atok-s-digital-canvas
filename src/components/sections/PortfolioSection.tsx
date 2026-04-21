@@ -13,8 +13,8 @@ const projects = [
   {
     title: "E-Commerce Platform",
     category: "Web Development",
-    desc: "A full-stack online store built with React and modern backend APIs.",
-    link: "#",
+    desc: "A full-stack online store built with Wordpress and modern backend APIs.",
+    link: "https://nsluxeshop.com/",
   },
   {
     title: "Street Life Nairobi",
