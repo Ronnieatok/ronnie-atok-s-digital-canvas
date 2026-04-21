@@ -26,7 +26,7 @@ const projects = [
     title: "Restaurant Website",
     category: "Web Development",
     desc: "Responsive website for a local restaurant with online menu and reservations.",
-    link: "#",
+    link: "https://eliyeresort.netlify.app/menu",
   },
   {
     title: "Wildlife Safari",
