@@ -8,7 +8,7 @@ const projects = [
     title: "Professional Photography Website",
     category: "Photography",
     desc: "Clix Visual is a professional photography studio based in Kenya, with a mission to capture authentic stories through imagery both locally and worldwide.",
-    link: "https://clixsvisual.netlify.apl",
+    link: "https://clixvisuals.netlify.app/",
   },
   {
     title: "E-Commerce Platform",
