@@ -26,7 +26,7 @@ const HomeSection = ({ onNavigate }: HomeSectionProps) => {
 
           <div className="flex flex-wrap gap-3">
             <a
-              href="https://docs.google.com/document/d/1P3BsOB6tOEwk3fDXt470acNueg0J1sPZ5xJwa4Ojlqs/edit?usp=sharing"
+              href="https://docs.google.com/document/d/1klPXr0Ho9b05wbGOhC1if9hiz7gHBZRA4XxhmP6qEjk/edit?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity"
