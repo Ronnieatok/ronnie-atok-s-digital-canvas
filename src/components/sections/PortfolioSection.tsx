@@ -6,7 +6,7 @@ const categories = ["All", "Photography", "Web Development"];
 const projects = [
    {
     title: "Professional Portfolio Website",
-    category: "Portfolio Deaign",
+    category: "Portfolio Design",
     desc: "Over the past 4years, I’ve partnered with startups, enterprises, and nonprofits to deliver measurable outcomes. The following portfolio highlights a cross-section of industries and solutions—from brand overhauls to digital platforms. Click through to see the challenge, solution, and key metrics.",
     link: "https://ronnieatokwebportfolio.netlify.app/",
   },
@@ -16,27 +16,33 @@ const projects = [
     desc: "Clix Visual is a professional photography studio based in Kenya, with a mission to capture authentic stories through imagery both locally and worldwide.",
     link: "https://clixvisuals.netlify.app/",
   },
+     {
+    title: "Blog Webiste",
+    category: "Anonymous Web Blog",
+    desc: "anonymouswithAtok — Kenya's Anonymous Confession Board that Speak freely. Land softly. Kenya's most raw anonymous board — confess, read, share. No name. No records. No fear",
+    link: "https://anonymouswithatok.vercel.app/",
+  },
   {
     title: "E-Commerce Platform",
-    category: "Web Development",
+    category: "E-commerce",
     desc: "A full-stack online store built with Wordpress and modern backend APIs.",
     link: "https://nsluxeshop.com/",
   },
   {
     title: "Restaurant Website",
-    category: "Web Development",
+    category: "Restaurant",
     desc: "Responsive website for a local restaurant with online menu and reservations.",
     link: "https://eliyeresort.netlify.app/menu",
   },
   {
     title: "Portfolio Dashboard",
-    category: "Web Development",
+    category: "Portfolio",
     desc: "Interactive analytics dashboard for tracking creative project metrics.",
     link: "https://ronnieatokwebportfolio.netlify.app/",
   },
   {
     title: "E-commerce Webiste",
-    category: "Web Development",
+    category: "E-commerce",
     desc: "Premium Street Beanies from Nairobi.",
     link: "https://beaniebyatok.netlify.app/",
   },
