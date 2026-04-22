@@ -4,6 +4,12 @@ import { ExternalLink, Camera, Code } from "lucide-react";
 const categories = ["All", "Photography", "Web Development"];
 
 const projects = [
+   {
+    title: "Professional Portfolio Website",
+    category: "Portfolio Deaign",
+    desc: "Clix Visual is a professional photography studio based in Kenya, with a mission to capture authentic stories through imagery both locally and worldwide.",
+    link: "https://ronnieatokwebportfolio.netlify.app/",
+  },
   {
     title: "Professional Photography Website",
     category: "Photography",
