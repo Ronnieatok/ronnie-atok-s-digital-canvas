@@ -29,10 +29,10 @@ const projects = [
     link: "https://ronnieatokwebportfolio.netlify.app/",
   },
   {
-    title: "Wedding Stories",
-    category: "Photography",
-    desc: "Elegant wedding photography capturing love stories across Kenya.",
-    link: "#",
+    title: "E-commerce Webiste",
+    category: "Web Development",
+    desc: "Premium Street Beanies from Nairobi.",
+    link: "https://beaniebyatok.netlify.app/",
   },
 ];
 
