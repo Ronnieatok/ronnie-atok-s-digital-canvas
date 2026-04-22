@@ -7,7 +7,7 @@ const projects = [
    {
     title: "Professional Portfolio Website",
     category: "Portfolio Deaign",
-    desc: "Clix Visual is a professional photography studio based in Kenya, with a mission to capture authentic stories through imagery both locally and worldwide.",
+    desc: "Over the past 4years, I’ve partnered with startups, enterprises, and nonprofits to deliver measurable outcomes. The following portfolio highlights a cross-section of industries and solutions—from brand overhauls to digital platforms. Click through to see the challenge, solution, and key metrics.",
     link: "https://ronnieatokwebportfolio.netlify.app/",
   },
   {
